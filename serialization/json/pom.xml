@@ -6,7 +6,7 @@
 		<artifactId>iw7i-serialization</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>json</artifactId>
+	<artifactId>iw7i-json</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>

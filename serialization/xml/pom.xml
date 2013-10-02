@@ -5,5 +5,5 @@
     <artifactId>iw7i-serialization</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xml</artifactId>
+  <artifactId>iw7i-xml</artifactId>
 </project>
