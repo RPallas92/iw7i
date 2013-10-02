@@ -1,29 +1,44 @@
-# 0. Setup
+## Lab 1. Setup
 
-## Connect to a Git repository
+This laboratory will consist of a series of tasks designed to familiarize you with the tools and
+technologies related to Web Engineering.
 
-**Eclipse step-by-step configuration**
-* Create a [free **GitHub** account](https://github.com/signup/free)
-* Install plugin *Eclipse GitHub intgration with task focused software*  (via *Install New Software...*)
-* [OPTIONAL] Install plugin *GitHub Flavored Markdown viewer plugin*  (via *Eclipse Marketplace ...*)
-* [OPTIONAL] Install plugin *Markdown Text Editor*  (via *Eclipse Marketplace ...*)
-* Go to Import -> Git -> Repositories from GitHub
-  * Search iw7i and select fjlopez/iw7i
-* Open Git Repository Exploring Perspective
-* Select `fjlopez/iw7i` and import Projects...
-  * Select `import as general project` from the `working directory`
-  * Use `iw7i` as project name
-* Back to the `Java EE` perspective
+### Task: Connect and clone to a Git repository
 
-**Command line support**
-* http://git-scm.com/downloads
-* Command line wrapper http://hub.github.com/ (OS X and Linux)
+[Git](http://git-scm.com/) is a distributed revision control and source code management. Git was initially 
+designed and developed by [Linus Torvalds](http://en.wikipedia.org/wiki/Linus_Torvalds) in 2005. A
+[recent survey](http://ianskerrett.wordpress.com/2013/06/12/eclipse-community-survey-results-for-2013/) 
+reports Git has a 30% adoption among Eclipse users. You should read 
+[Git Basics](http://git-scm.com/book/en/Git-Basics) to get going with Git.
 
-**GUI support**
-http://git-scm.com/downloads/guis
+[GitHub](https://github.com/) is a web-based hosting service for software development projects that use Git.
+GitHub offers free accounts for open source projects. GitHub is 
+[one of the most popular](http://readwrite.com/2011/06/02/github-has-passed-sourceforge) code repository site
+for open source projects.
 
-**Additional documentation**
-* http://git-scm.com/book/en/Git-Basics
+**[MANDATORY] Clone a repository using Eclipse git**
+
+* Create a [free GitHub account](https://github.com/signup/free).
+* Install plugin `Eclipse GitHub intgration with task focused software` (via `Install New Software...`).
+* [RECOMMENDED] Install plugin `GitHub Flavored Markdown viewer plugin`  (via `Eclipse Marketplace ...`).
+* [RECOMMENDED] Install plugin `Markdown Text Editor`  (via `Eclipse Marketplace ...`).
+* Go to `Import -> Git -> Repositories` from GitHub and then search `iw7i` and select `fjlopez/iw7i` (this
+repository!).
+* Open `Git Repository Exploring` perspective.
+* Select `fjlopez/iw7i` and then `Import Projects...`. Next select `import as general project` from the 
+`working directory` and then use `iw7i` as project name.
+* Back to the `Java EE` perspective.
+
+**[RECOMMENDED] Install command line git**
+
+It is recommended to install `git` command line tools from [git site](http://git-scm.com/downloads). 
+GitHub has developed [a command line wrapper](http://hub.github.com/) for OS X and Linux that eases the use
+of this tool when you are working with a GitHub repository.
+
+**[RECOMMENDED] Install GUI tool**
+
+There are available commercial and free enhanced GUI tools for browsing and committing for Windows, OS X and
+Linux [here](http://git-scm.com/downloads/guis)
 
 ## Apache Maven
 
