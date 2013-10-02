@@ -1,6 +1,6 @@
-# 30246 - Ingeniería Software 2013-2014 (Labs)
+## 30246 - Ingeniería Software 2013-2014 (Labs)
 
-## Requirements
+### Requirements
 
 * Java SE 7 JDK
 * [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads/). Includes:
@@ -12,10 +12,10 @@
   * Eclipse XML Editors and Tools
   * and more
 
-## Labs
-0. [Setup](docs/setup.md)
+### Labs
+1. [Setup](docs/setup.md)
 1. "Big" Web Services
-2. RESTful Web Services
-3. Message Oriented Middleware
-4. Enterprise Service Bus
-5. BPEL
+1. RESTful Web Services
+1. Message Oriented Middleware
+1. Enterprise Service Bus
+1. BPEL
