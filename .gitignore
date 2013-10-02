@@ -4,5 +4,7 @@
 *.jar
 *.war
 *.ear
+*.md.html
 /.settings
 /.project
+/.html
