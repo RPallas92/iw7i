@@ -20,7 +20,7 @@ for open source projects.
 
 Create first a [free GitHub account](https://github.com/signup/free). Then install the following Eclipse 
 plugins:
-* `Eclipse GitHub intgration with task focused software` (via `Install New Software...`).
+* `Eclipse GitHub intgration with task focused interface` (via `Install New Software...`).
 * [RECOMMENDED] `GitHub Flavored Markdown viewer plugin`  (via `Eclipse Marketplace ...`).
 * [RECOMMENDED] `Markdown Text Editor`  (via `Eclipse Marketplace ...`).
 
