@@ -195,7 +195,7 @@ is declared as a `war`.
 
 **[MANDATORY] Run and test the application**
 
-First you should finish the configuration of the system. Go to `iw7i` properties and then `Project Facets -> Dynamic Web Module -> Runtimes`
+First you should finish the configuration of the system. Go to `iw7i-servlets` properties and then `Project Facets -> Dynamic Web Module -> Runtimes`
 and select `Apache Tomcat 7.0`. Next you can run the Web application in `Run as -> Run on Server`. Now the application should
 be running in the Web container and Eclipse should open an embedded browser pointing at http://localhost:8080/iw7i-servlets/index.html
 Note that each change in the source code is automatically republished by the server, enabling near real-time testing of the Web application.
