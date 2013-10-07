@@ -6,7 +6,7 @@ import javax.jws.WebService;
 @WebService
 public class HelloWebService {
 	
-	@WebMethod
+	@WebMethod()
 	public String sayHello(String name) {
 		return "Hello "+name;
 	}
