@@ -20,9 +20,10 @@ for open source projects.
 
 Create first a [free GitHub account](https://github.com/signup/free). Then install the following Eclipse 
 plugins:
-* `Eclipse GitHub intgration with task focused software` (via `Install New Software...`).
+* `Eclipse GitHub intgration with task focused interface` (via `Install New Software...`).
 * [RECOMMENDED] `GitHub Flavored Markdown viewer plugin`  (via `Eclipse Marketplace ...`).
 * [RECOMMENDED] `Markdown Text Editor`  (via `Eclipse Marketplace ...`).
+
 Go to `Import -> Git -> Repositories` from GitHub and then search `iw7i` and select `fjlopez/iw7i` (this
 repository!).
 
@@ -157,6 +158,7 @@ acquired some expertise in installing Eclipse plugins. Install the plugin `Proto
 The project `iw7i-protobuf` has the following Java classes that can be run:
 * `iw7i.serialization.protobuf.AddPerson` creates and writes contacts to a Protocol Buffers file
 * `iw7i.serialization.protobuf.ListPeople` reads and list its contents.
+
 And the required generated code in Java to run (`iw7i.serialization.protobuf.AddressBookProtos`).
 
 If you want to generate code you must
@@ -185,3 +187,23 @@ should be at `src-gen/main/java` as the `pom.xml` has the following snippet:
 	</executions>
 </plugin>
 ```
+
+### Task 1.5: Working with a Dynamic Web Module
+
+The project `iw7i-servlets` is a Servlet 3.0 Web application able to generate dynamic content. In the `pom.xml` file 
+is declared as a `war`.
+
+**[MANDATORY] Run and test the application**
+
+First you should finish the configuration of the system. Go to `iw7i-servlets` properties and then `Project Facets -> Dynamic Web Module -> Runtimes`
+and select `Apache Tomcat 7.0`. Next you can run the Web application in `Run as -> Run on Server`. Now the application should
+be running in the Web container and Eclipse should open an embedded browser pointing at http://localhost:8080/iw7i-servlets/index.html
+Note that each change in the source code is automatically republished by the server, enabling near real-time testing of the Web application.
+
+**[CHALLENGE] Run and test the application from the command line**
+
+Use Google to discover how to use Maven and an embedded [Jetty](http://www.eclipse.org/jetty/) for running a Servlet 3.0 
+application from the command line.
+
+
+
