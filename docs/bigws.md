@@ -24,12 +24,12 @@ Next you should import them into your eclipse workspace and test them.
 The goal of this task is the transformation of `iw7i-hellows` from a `jar` project to a `war` project.
 This task is quite complex and requires:
 * In the `pom.xml`:
-** Change the package to `war` (it's `jar` by default)
-** Add `com.sun.xml.ws:jaxws-rt:2.2.8` as a dependency
+ * Change the package to `war` (it's `jar` by default)
+ * Add `com.sun.xml.ws:jaxws-rt:2.2.8` as a dependency
 * Create the file `src/main/webapp/WEB-INF/web.xml` and add:
-** Declare the `com.sun.xml.ws.transport.http.servlet.WSServlet` servlet provided by `jaxws-rt`.
-** Declare the `com.sun.xml.ws.transport.http.servlet.WSServletContextListener` listener provided by `jaxws-rt`.
-** Map a URI pattern to the servlet
+ * Declare the `com.sun.xml.ws.transport.http.servlet.WSServlet` servlet provided by `jaxws-rt`.
+ * Declare the `com.sun.xml.ws.transport.http.servlet.WSServletContextListener` listener provided by `jaxws-rt`.
+ * Map a URI pattern to the servlet
 * Create the file `src/main/webapp/WEB-INF/sun-jaxws.xml` and bind the 
 class `iw7i.bigws.hellows.HelloWebService` with the endpoint.
 * Update project with `maven`
