@@ -46,7 +46,7 @@ This task is fulfilled when you can get the WSDL document from the URI where you
 the requires require to regenerate the code. Then, update `pom.xml` accordingly and perform the required 
 steps for updating the code according to your configuration.
 
-This task is intended to be done with the help of the available documentation at [JAX-WM Maven plugin](jax-ws-commons.java.net).
+This task is intended to be done with the help of the available documentation at [JAX-WM Maven plugin](https://jax-ws-commons.java.net/jaxws-maven-plugin/).
 
 ### Task 2.4: Design and implement an electronic Address Book with Web Services
 
