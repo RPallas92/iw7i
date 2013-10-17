@@ -25,5 +25,6 @@
 		<module>serialization</module>
     	<module>servlets</module>
     	<module>bigws</module>
+    	<module>restfulws</module>
 	</modules>
 </project>
