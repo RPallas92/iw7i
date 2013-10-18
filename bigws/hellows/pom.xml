@@ -6,5 +6,5 @@
 		<artifactId>iw7i-bigws</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>hellows</artifactId>
+	<artifactId>iw7i-hellows</artifactId>
 </project>
