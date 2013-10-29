@@ -8,10 +8,10 @@ public class Client {
 		HelloWebServiceService hwss = new HelloWebServiceService();
 		HelloWebService hws = hwss.getHelloWebServicePort();
 
-		// If there is a TCP/IP Monitor 8090 -> 8080
-		// String endpointURL = "http://localhost:8090/helloWorld";
-		// BindingProvider bp = (BindingProvider)hws;
-		// bp.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, endpointURL);
+//		// If there is a TCP/IP Monitor 8090 -> 8080
+//		String endpointURL = "http://localhost:8080/hellows/HelloWorld";
+//		BindingProvider bp = (BindingProvider)hws;
+//		bp.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, endpointURL);
 
 		
 		System.out.println(hws.sayHello("World!"));

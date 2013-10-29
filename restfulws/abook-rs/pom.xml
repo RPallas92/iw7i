@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>es.unizar</groupId>
+		<artifactId>iw7i-restfulws</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>iw7i-abook-rs</artifactId>
+	<packaging>war</packaging>
+
+	<properties>
+		<version.java>1.7</version.java>
+		<version.javaee>7.0</version.javaee>
+		<version.jersey>2.4</version.jersey>
+		<version.junit>4.11</version.junit>
+		<!--Maven Plugins -->
+		<version.maven.compiler.plugin>3.1</version.maven.compiler.plugin>
+		<version.maven.dependency.plugin>2.8</version.maven.dependency.plugin>
+		<version.maven.jar.plugin>2.4</version.maven.jar.plugin>
+		<version.maven.war.plugin>2.4</version.maven.war.plugin>
+		<version.maven.test.plugin>2.16</version.maven.test.plugin>
+		<!--Test -->
+		<skipTests>false</skipTests>
+		<skipITs>${skipTests}</skipITs>
+		<skipUTs>${skipTests}</skipUTs>
+		<!--Encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-grizzly2-http</artifactId>
+			<version>${version.jersey}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-moxy</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${version.junit}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<finalName>mybook</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven.compiler.plugin}</version>
+				<inherited>true</inherited>
+				<configuration>
+					<source>${version.java}</source>
+					<target>${version.java}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${version.maven.jar.plugin}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>${version.maven.test.plugin}</version>
+				<configuration>
+					<skipTests>${skipTests}</skipTests>
+					<skipITs>${skipITs}</skipITs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>integration-test</id>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${version.maven.test.plugin}</version>
+				<configuration>
+					<skipTests>${skipUTs}</skipTests>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${version.maven.war.plugin}</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

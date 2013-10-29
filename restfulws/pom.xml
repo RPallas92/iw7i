@@ -10,5 +10,6 @@
   <modules>
   	<module>hellorestfulws</module>
   	<module>hellorestfulcli</module>
+  	<module>abook-rs</module>
   </modules>
 </project>
