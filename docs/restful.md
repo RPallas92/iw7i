@@ -19,9 +19,18 @@ for accessing the RESTful endpoint. The class `iw7i.restfulws.hellows.ClientRS` 
 **[MANDATORY] Run tests of `iw7i-abook-rs`** 
 
 This project is an example of a simple Address Book turned into a RESTful WS. The class `iw7i.restfulws.abook.AddressBookService` acts a service. The URI policy is:
-* `/contacts` returns all the address list. `GET` and `POST` are the only allowed methods.
+* `/contacts` returns all the entries. `GET` and `POST` are the only allowed methods.
 * `/contacts/person/{id}` returns the data of a contact. `GET`, `PUT` and `DELETE` are allowed in this enpoint.
-The class The class `iw7i.restfulws.abook.AddressBookServiceTest` contains a set of `junit` tests that start a the service at
-`http://localhost:8282/` and interacts with it.
+The representation is only available as JSON. 
 
+The class The class `iw7i.restfulws.abook.AddressBookServiceTest` contains a set of `junit` tests that start a the service at
+`http://localhost:8282/` and interacts with it. The approach shown here can be reused for testing the integration of Web Services.
+
+**[OPTIONAL] Improve  `iw7i-abook-rs`** 
+
+The code can be improved in different RESTful ways:
+* `/contacts/phone/{number}` should return the corresponding phone number plus a link to the related persons 
+* `/contacts/name:{name}` or `/contacts?name={name}`  should return a filtered list of resources
+* `/contacts` returns too much information about contacts. It'S be better to return only a list of URL and a label.
+* The service has too much explicit business logic, place it in an `AddressBookDAO` instance (see [DAO](http://www.oracle.com/technetwork/java/dataaccessobject-138824.html))
 
