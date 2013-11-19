@@ -6,7 +6,7 @@
 		<artifactId>iw7i-restfulws</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>hellorestfulws</artifactId>
+	<artifactId>iw7i-hellorestfulws</artifactId>
 	<packaging>war</packaging>
 	<dependencies>
 		<dependency>

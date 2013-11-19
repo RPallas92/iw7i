@@ -84,7 +84,7 @@ public class AddressBookService {
 			@PathParam("id") int id, Person person) {
 		for (int i = 0; i < addressBook.getPersonList().size(); i++) {
 			if (addressBook.getPersonList().get(i).getId() == id) {
-				person.setId(id);
+				// person.setId(id);
 				person.setHref(info.getAbsolutePath());
 				addressBook.getPersonList().set(i, person);
 				return Response.ok(person).build();

@@ -259,7 +259,7 @@ public class AddressBookServiceTest {
 		assertEquals(MediaType.APPLICATION_JSON_TYPE, response.getMediaType());
 		person = response.readEntity(Person.class);
 		assertEquals(person.getName(), juan.getName());
-		assertEquals(person.getId(), juan.getId());
+		assertEquals(2, juan.getId());
 		assertEquals(person.getHref(), juan.getHref());
 
 		// Test user 3 exists

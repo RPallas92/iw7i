@@ -26,5 +26,6 @@
     	<module>servlets</module>
     	<module>bigws</module>
     	<module>restfulws</module>
+    	<module>messaging</module>
 	</modules>
 </project>
