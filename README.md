@@ -16,6 +16,6 @@
 1. [Setup](docs/setup.md)
 1. ["Big" Web Services](docs/bigws.md)
 1. [RESTful Web Services](docs/restful.md)
-1. Message Oriented Middleware
+1. [Message Oriented Services](docs/messaging.md)
 1. Enterprise Service Bus
 1. BPEL
