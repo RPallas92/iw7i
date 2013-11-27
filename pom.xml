@@ -27,5 +27,6 @@
     	<module>bigws</module>
     	<module>restfulws</module>
     	<module>messaging</module>
+    	<module>eip</module>
 	</modules>
 </project>
