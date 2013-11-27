@@ -17,5 +17,5 @@
 1. ["Big" Web Services](docs/bigws.md)
 1. [RESTful Web Services](docs/restful.md)
 1. [Message Oriented Services](docs/messaging.md)
-1. Enterprise Service Bus
-1. BPEL
+1. [Enterprise Integration Patterns](docs/eip.md)
+1. Enterprise Service Bus/BPEL
