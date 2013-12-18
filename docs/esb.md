@@ -17,6 +17,31 @@ Explore the console and run the following commands:
 
 ### Task 6.2: EIP: The magic `Camel` route
 
+Let's copy files automatically between folders using `Camel`. Create and copy to the `deploy` folder the following file.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint
+    xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+	http://www.osgi.org/xmlns/blueprint/v1.0.0
+	http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+    <camelContext xmlns="http://camel.apache.org/schema/blueprint">
+		<route>
+			<from uri="file:input"/>
+			<log message="Moving ${file:name} to the output directory"/>
+			<to uri="file:output"/>
+		</route>
+    </camelContext>
+</blueprint>
+```
+Questions:
+* What is [OSGI](http://www.osgi.org/Main/HomePage)? What is a [Bluepring](http://www.ibm.com/developerworks/opensource/library/os-osgiblueprint/)? Are you **already** using an OSGI platform? Which?
+* What had happen? How `list` and `log:display` help?
+* Could you list the available `Camel` routes? Hint, use first `help camel`.
+* Test the route. Copy a file to `input` and see how it is moved to `output`.
+* Can you uninstall the route?
+
 ### Task 6.3: REST: `JAX-RS` customer
 
 ### Task 6.4: SOAP: `JAX-WS` Hello world
