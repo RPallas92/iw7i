@@ -44,6 +44,14 @@ Questions:
 
 ### Task 6.3: REST: `JAX-RS` customer
 
+In order to understand this and following tasks you should see the source code of the examples. Import to your Eclipse the Maven projects found in the `examples` folder. Open the `README.txt` file of the `cxf-jaxrs-blueprint` example and follow the instructions to **fast** install and run the JAX-RS CXF examples.
+
+Questions:
+* From where the code was installed?
+* What can be found at [http://localhost:8181/cxf/crm/customerservice?_wadl&_type=xml](http://localhost:8181/cxf/crm/customerservice?_wadl&_type=xml)?
+* What is the advantage of using a `Blueprint` here?
+* If you want to deploy a new version to `ServiceMix`, how you would proceed? What would be the role of the maven plugin `maven-bundle-plugin`?
+
 ### Task 6.4: SOAP: `JAX-WS` Hello world
 
 ### Task 6.5: Events: `ActiveMQ` example
