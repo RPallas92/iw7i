@@ -54,6 +54,13 @@ Questions:
 
 ### Task 6.4: SOAP: `JAX-WS` Hello world
 
+Read the `README.txt` file of the `cxf-jaxrws-blueprint` example and insall the JAX-WS CXF examples. Test it using the `client.html`.
+
+Questions:
+* How many CXF endpoints are running now? 
+* Can you stop and enpoint? Why you could want to do it?
+* Can you explain why the maven plugin `maven-bundle-plugin` is different from JAX-RS bundle?
+
 ### Task 6.5: Events: `ActiveMQ` example
 
 ### Task 6.6: Business logic: `Drools` rules  
