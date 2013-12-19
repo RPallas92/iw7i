@@ -61,8 +61,41 @@ Questions:
 * Can you stop and enpoint? Why you could want to do it?
 * Can you explain why the maven plugin `maven-bundle-plugin` is different from JAX-RS bundle?
 
-### Task 6.5: Events: `ActiveMQ` example
+### Task 6.5: Events: pub-sub example
 
-### Task 6.6: Business logic: `Drools` rules  
+`ServiceMix` supports different event-based systems (e.g. `JMS`, `ActiveMQ`). We are going to explore the support of the OASIS standard [WS-Notification](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsn). Go to the project `cxf-wsn` and install in `ServiceMix` the receiver and notifier modules.
 
-### Task 6.7: Business logic: `Activiti`, a Business Process Management (BPM) platform  
+Questions:
+* [Only if something goes wrong] How to uninstall/reinstall a bundle?
+* Is it possible to generate a report that describes what's going on a route (e.g. number of emails sent)?
+* Which component put the message in the queue? Who provides it? Locate its URL
+* List the busses working in your instance? What do you think the term bus identifies? 
+
+### Challenge: Use a BPM solution in your code
+
+The following code is the [BPMN](http://www.bpmn.org/) specification of a process (see more details [here](http://servicemix.apache.org/docs/5.0.x/activiti/activiti-camel-example.html) and in the README.txt file of the example). This specification can be run by [Activity](http://www.activiti.org/), a BPMN process engine supported by `ServiceMix`. `ServiceMix` glues each `serviceTask` to routes, brokers, services, Java beans ... 
+```xml
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" 
+	xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+	xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+	typeLanguage="http://www.w3.org/2001/XMLSchema" 
+	expressionLanguage="http://www.w3.org/1999/XPath" 
+	targetNamespace="http://www.activiti.org/test">
+    <process id="OrderProcess" isExecutable="true">
+        <startEvent id="start"/>
+        <sequenceFlow id="flow1" sourceRef="start" targetRef="processOrder"/>
+        <serviceTask id="processOrder" activiti:delegateExpression="${camel}"/>
+        <sequenceFlow id="flow2" sourceRef="processOrder" targetRef="receiveDelivery"/>
+        <receiveTask id="receiveDelivery" name="Wait for Delivery" />
+        <sequenceFlow id="flow3" sourceRef="receiveDelivery" targetRef="processDelivery"/>
+        <serviceTask id="processDelivery" activiti:delegateExpression="${camel}"/>
+        <sequenceFlow id="flow4" sourceRef="processDelivery" targetRef="end"/>
+        <endEvent id="end"/>
+    </process>
+</definitions>
+```
+Can you use `ServiceMix` (i.e JAX-RS + Camel routes + Java Beans + Activiti) in your project?
+
+
